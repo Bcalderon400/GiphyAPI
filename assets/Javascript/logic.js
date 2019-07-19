@@ -1,7 +1,7 @@
 var topics = [
-    'archer',
-    'futurama'
-]
+    'Archer',
+    'Futurama'
+];
 
 console.log(topics)
 
@@ -13,10 +13,22 @@ function renderButtons() {
         var b = $('<button>')
 
         b.addClass('cartoon')
-        b.attr('data-name', topic[i])
+        b.attr('data-name', topics[i])
         b.text(topics[i])
 
         $('#cartoon-buttons').append(b)
     }
 }
-// $('#add-cartoon').on("click", function(event))
+console.log(renderButtons)
+
+$('#add-cartoon').on("click", function(event) {
+
+    event.preventDefault()
+
+    var topic = $('#cartoon-input').val().trim()
+
+    topics.push(topic)
+
+    renderButtons()
+})
+renderButtons()

@@ -18,17 +18,20 @@ function renderButtons() {
 
         $('#cartoon-buttons').append(b)
     }
+    console.log(b)
 }
-console.log(renderButtons)
 
-$('#add-cartoon').on("click", function(event) {
+
+$(document).on("click", '#add-cartoon', function(event) {
 
     event.preventDefault()
 
     var topic = $('#cartoon-input').val().trim()
+    console.log(topic)
 
     topics.push(topic)
 
     renderButtons()
-})
+
+});
 renderButtons()

@@ -3,3 +3,13 @@ form,
 input {
     margin: 10px;
 }
+
+#container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#gifs {
+    column-count: 2;
+    column-width: 100px
+}

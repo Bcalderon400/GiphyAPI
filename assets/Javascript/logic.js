@@ -24,7 +24,7 @@ function renderButtons() {
     $('button').on('click', function() {
 
         var show = $(this).attr('data-name')
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=VXqJz0wVYIVmRpwkI5yT0uRFnpT5O93o&limit=10"
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=VXqJz0wVYIVmRpwkI5yT0uRFnpT5O93o&limit=05"
 
         $.ajax({
             url: queryURL,
@@ -41,24 +41,14 @@ function renderButtons() {
 
                 var showImage = $('<img>')
 
-                showImage.attr('src', results[i].images.fixed_height.url)
+                showImage.attr('src', results[i].images.preview_gif.url)
                 showImage.attr('gif')
                 showDiv.append(rate)
                 showDiv.append(showImage)
 
                 $('#gifs').prepend(showDiv)
 
-                $('.gif').on('click', function(stop) {
-                    var state = $(this).attr('data-state')
-                    if (state === "still") {
-                        $(this).attr("src", $(this).attr("data-animate"));
-                        $(this).attr("data-state", "animate");
-                    } else {
-                        $(this).attr("src", $(this).attr("data-still"));
-                        $(this).attr("data-state", "still");
-                    }
-                    console.log(stop)
-                })
+
 
             }
         })

@@ -19,6 +19,51 @@ function renderButtons() {
         $('#cartoon-buttons').append(b)
     }
     console.log(b)
+
+
+    $('button').on('click', function() {
+
+        var show = $(this).attr('data-name')
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=VXqJz0wVYIVmRpwkI5yT0uRFnpT5O93o&limit=10"
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response)
+
+            var results = response.data;
+            console.log(results)
+            for (var i = 0; i < results.length; i++) {
+                var showDiv = $('<div>')
+
+                var rate = $('<p>').text("Rating:" + results[i].rating)
+
+                var showImage = $('<img>')
+
+                showImage.attr('src', results[i].images.fixed_height.url)
+                showImage.attr('gif')
+                showDiv.append(rate)
+                showDiv.append(showImage)
+
+                $('#gifs').prepend(showDiv)
+
+                $('.gif').on('click', function(stop) {
+                    var state = $(this).attr('data-state')
+                    if (state === "still") {
+                        $(this).attr("src", $(this).attr("data-animate"));
+                        $(this).attr("data-state", "animate");
+                    } else {
+                        $(this).attr("src", $(this).attr("data-still"));
+                        $(this).attr("data-state", "still");
+                    }
+                    console.log(stop)
+                })
+
+            }
+        })
+    })
+
 }
 
 $(document).on("click", '#add-cartoon', function(event) {
@@ -34,34 +79,3 @@ $(document).on("click", '#add-cartoon', function(event) {
 
 });
 renderButtons()
-
-
-$('button').on('click', function() {
-
-    var show = $(this).attr('data-name')
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=VXqJz0wVYIVmRpwkI5yT0uRFnpT5O93o&limit=10"
-
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response) {
-        console.log(response)
-
-        var results = response.data;
-        console.log(results)
-        for (var i = 0; i < results.length; i++) {
-            var showDiv = $('<div>')
-
-            var rate = $('<p>').text("Rating:" + results[i].rating)
-
-            var showImage = $('<img>')
-
-            showImage.attr('src', results[i].images.fixed_height.url)
-
-            showDiv.append(rate)
-            showDiv.append(showImage)
-
-            $('#gifs').prepend(showDiv)
-        }
-    })
-})

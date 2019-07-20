@@ -46,5 +46,22 @@ $('button').on('click', function() {
         method: "GET"
     }).then(function(response) {
         console.log(response)
+
+        var results = response.data;
+        console.log(results)
+        for (var i = 0; i < results.length; i++) {
+            var showDiv = $('<div>')
+
+            var rate = $('<p>').text("Rating:" + results[i].rating)
+
+            var showImage = $('<img>')
+
+            showImage.attr('src', results[i].images.fixed_height.url)
+
+            showDiv.append(rate)
+            showDiv.append(showImage)
+
+            $('#gifs').prepend(showDiv)
+        }
     })
 })

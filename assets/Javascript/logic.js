@@ -67,8 +67,9 @@ function renderButtons() {
         var b = $('<button>')
 
         b.addClass('cartoon')
+        b.addClass('btn-lg btn-outline-dark')
         b.attr('data-name', topics[i])
-        b.text(topics[i])
+        b.text("#" + topics[i])
 
         $('#cartoon-buttons').append(b)
 

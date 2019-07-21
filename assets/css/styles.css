@@ -1,8 +1,20 @@
-button,
 form,
-input {
-    margin: 10px;
-    border-radius: 75px;
+input,
+.cartoon {
+    margin: 20px;
+    border-radius: 30px;
+}
+
+button,
+#add-cartoon {
+    background-image: url('/assets/images/background-blur-close-up-1044990.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#add-cartoon {
+    margin-top: 20px;
 }
 
 #container {

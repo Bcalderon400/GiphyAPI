@@ -8,28 +8,27 @@
     <title>Giphy API</title>
 
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <div id="container">
 
-        <form id="cartoon-form">
-            <label for="cartoon-input">Type a show below</label><br>
-            <input type="text" id="cartoon-input"><br>
-            <input type="submit" value="Submit Cartoon" id="add-cartoon">
+    <div class="jumbotron jumbotron-fluid">
+        <div id="container">
+            <form id="cartoon-form">
+                <label for="cartoon-input">Type a show below</label><br>
+                <input type="text" id="cartoon-input"><br>
+                <input type="submit" value="Submit Cartoon" id="add-cartoon">
+            </form>
+            <div id="cartoon-buttons">
+            </div>
 
-        </form>
-        <div id="cartoon-buttons">
-
+            <section id="gif-container">
+                <div id="gifs"></div>
+            </section>
         </div>
-
-        <section id="gif-container">
-            <div id="gifs"></div>
-
-
-        </section>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="./assets/Javascript/logic.js"></script>
 </body>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Giphy API</title>
 
@@ -13,18 +13,21 @@
 <body>
     <div id="container">
 
-        <div id="cartoon-buttons">
-
-        </div>
-
         <form id="cartoon-form">
             <label for="cartoon-input">Type a show below</label><br>
             <input type="text" id="cartoon-input"><br>
             <input type="submit" value="Submit Cartoon" id="add-cartoon">
 
         </form>
+        <div id="cartoon-buttons">
 
-        <div id="gifs"></div>
+        </div>
+
+        <section id="gif-container">
+            <div id="gifs"></div>
+
+
+        </section>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

@@ -2,6 +2,7 @@ button,
 form,
 input {
     margin: 10px;
+    border-radius: 75px;
 }
 
 #container {
@@ -10,6 +11,13 @@ input {
 }
 
 #gifs {
-    column-count: 2;
-    column-width: 100px
+    background-color: black;
+    margin: 30px 350px;
+}
+
+@media screen and (max-width: 640px) {
+    #gifs {
+        background-color: black;
+        margin-top: 40px;
+    }
 }

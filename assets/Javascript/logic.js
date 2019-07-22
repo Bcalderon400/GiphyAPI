@@ -68,6 +68,7 @@ function renderButtons() {
 
         b.addClass('cartoon')
 
+        b.addClass('button bouncy')
         b.attr('data-name', topics[i])
         b.text("#" + topics[i])
 

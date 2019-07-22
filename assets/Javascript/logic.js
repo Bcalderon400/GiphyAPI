@@ -1,6 +1,6 @@
 var topics = [
-    'Archer',
-    'Futurama'
+    'Spaceballs',
+    'Saturn'
 ];
 
 console.log(topics)
@@ -61,27 +61,27 @@ $('.gif').on('click', function() {
 
 function renderButtons() {
 
-    $('#cartoon-buttons').empty();
+    $('#spaceButtons').empty();
 
     for (var i = 0; i < topics.length; i++) {
         var b = $('<button>')
 
         b.addClass('cartoon')
-        b.addClass('btn-lg btn-outline-dark')
+
         b.attr('data-name', topics[i])
         b.text("#" + topics[i])
 
-        $('#cartoon-buttons').append(b)
+        $('#spaceButtons').append(b)
 
         console.log(b)
     }
 }
 
-$("#add-cartoon").on("click", function(event) {
+$("#addSpacething").on("click", function(event) {
 
     event.preventDefault()
 
-    var topic = $('#cartoon-input').val().trim()
+    var topic = $('#enterSpacething').val().trim()
     console.log(topic)
 
     topics.push(topic)
@@ -94,3 +94,7 @@ $("#add-cartoon").on("click", function(event) {
 
 $(document).on('click', '.cartoon', displayGifs)
 renderButtons()
+
+// ***********************************************************************************************
+// **********************************************************************
+// ***********************************************************************

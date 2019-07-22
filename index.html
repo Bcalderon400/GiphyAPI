@@ -12,23 +12,37 @@
 
 </head>
 
+
 <body>
+    <video autoplay muted loop id="myVideo">
+                <source src="/assets/images/darkness-shine.mp4" type="video/mp4">
+              </video>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div id="container">
-            <form id="cartoon-form">
-                <label for="cartoon-input">Type a show below</label><br>
-                <input type="text" id="cartoon-input"><br>
-                <input type="submit" value="Submit Cartoon" id="add-cartoon">
-            </form>
-            <div id="cartoon-buttons">
+
+    <div id="container">
+        <form id="space-form">
+            <label for="enterSpacething">Type a show below</label><br>
+            <input type="text" id="enterSpacething"><br>
+            <div class="svg-wrapper" id="addSpacething">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                          <rect id="shape" height="40" width="150" />
+                          <div id="text">
+                            <a href=""><span class="spot"></span>Submit</a>
+                          </div>
+                        </svg>
             </div>
+            <!-- <input type="submit" class="button" value="To Submit and Beyond" id="addSpacething"> -->
+        </form>
 
-            <section id="gif-container">
-                <div id="gifs"></div>
-            </section>
+        <div id="spaceButtons">
         </div>
+
+        <section id="gif-container">
+            <div id="gifs"></div>
+        </section>
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="./assets/Javascript/logic.js"></script>
 </body>

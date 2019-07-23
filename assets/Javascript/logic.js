@@ -25,7 +25,7 @@ function displayGifs() {
             } else {
                 var showDiv = $('<div>')
 
-                var rate = $('<p>').text("Rating:" + results[i].rating)
+                var rate = $('<p>').text("Rating: " + results[i].rating)
 
                 var showImage = $('<img>')
 
@@ -67,8 +67,6 @@ function renderButtons() {
         var b = $('<button>')
 
         b.addClass('cartoon')
-
-        b.addClass('button bouncy')
         b.attr('data-name', topics[i])
         b.text("#" + topics[i])
 

@@ -4,12 +4,94 @@ input,
     margin: 20px;
 }
 
+#myVideo {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #myVideo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #myVideo {
+        width: auto;
+        height: 100%;
+    }
+}
+
+#container {
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+}
+
 label {
-    padding: 30px;
     font-family: 'Alfa Slab One', cursive;
     color: white;
     font-size: 30px;
     text-transform: uppercase;
+    text-shadow: 0 1px 0 #000, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+input[type=text] {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 2px solid #06D6A0;
+    border-radius: 3em;
+    background: rgba(255, 255, 255, 0);
+    outline: none;
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+#enterSpacething {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.hvr-bounce-in {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.hvr-bounce-in:hover,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+button {
+    color: #fff;
+    border: 1px solid #009FFD;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.9s;
+    font-weight: 800;
+}
+
+button:hover {
+    color: #000000;
+    background-color: #06D6A0;
+}
+
+#gifs {
+    margin: 0 auto;
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
 }
 
 
@@ -28,8 +110,6 @@ css {
   */
 
 .svg-wrapper {
-    margin-top: 0;
-    position: relative;
     width: 150px;
     /*make sure to use same height/width as in the html*/
     height: 40px;
@@ -90,77 +170,5 @@ css {
 
 /* ***********************svg end ************************************************************************/
 
-button {
-    color: #fff;
-    border: 1px solid #009FFD;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0);
-    transition: all 0.9s;
-    font-weight: 800;
-}
-
-button:hover {
-    color: #000000;
-    background-color: #06D6A0;
-}
-
-.bouncy {
-    animation: bouncy 5s infinite linear;
-    position: relative;
-}
-
-@keyframes bouncy {
-    0% {
-        top: 0em
-    }
-    40% {
-        top: 0em
-    }
-    43% {
-        top: -0.9em
-    }
-    46% {
-        top: 0em
-    }
-    48% {
-        top: -0.4em
-    }
-    50% {
-        top: 0em
-    }
-    100% {
-        top: 0em;
-    }
-}
-
 
 /*  */
-
-#myVideo {
-    position: fixed;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-#enterSpacething {
-    width: 400px;
-    margin-bottom: 30px;
-}
-
-#container {
-    margin-top: 100px;
-    text-align: center;
-    position: relative;
-}
-
-#gifs {
-    margin: 0 auto;
-}
-
-@media screen and (max-width: 640px) {
-    #gifs {
-        background-color: black;
-        margin-top: 40px;
-    }
-}

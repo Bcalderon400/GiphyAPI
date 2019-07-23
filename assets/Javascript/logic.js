@@ -47,21 +47,22 @@ function displayGifs() {
 
 }
 
-$('.gif').on('click', function() {
-    var state = $(this).attr('data-state')
+// //$('.gif').on('click', function() {
+//     var state = $(this).attr('data-state')
 
-    if (state === 'still') {
-        $(this).attr('src', $(this).data('animate'));
-        $(this).attr('data-state', 'animate');
-    } else {
-        $(this).attr('src', $(this).data('still'));
-        $(this).attr('data-state', 'still');
-    }
-})
+//     if (state === 'still') {
+//         $(this).attr('src', $(this).data('animate'));
+//         $(this).attr('data-state', 'animate');
+//     } else {
+//         $(this).attr('src', $(this).data('still'));
+//         $(this).attr('data-state', 'still');
+//     }
+// })
 
 function renderButtons() {
 
     $('#spaceButtons').empty();
+
 
     for (var i = 0; i < topics.length; i++) {
         var b = $('<button>')
@@ -73,7 +74,9 @@ function renderButtons() {
         $('#spaceButtons').append(b)
 
         console.log(b)
+
     }
+
 }
 
 $("#addSpacething").on("click", function(event) {
@@ -87,12 +90,12 @@ $("#addSpacething").on("click", function(event) {
 
     renderButtons()
 
-
-
 });
 
 $(document).on('click', '.cartoon', displayGifs)
+
 renderButtons()
+
 
 // ***********************************************************************************************
 // **********************************************************************

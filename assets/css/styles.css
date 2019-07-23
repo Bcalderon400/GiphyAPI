@@ -39,10 +39,10 @@ input,
 
 label {
     font-family: 'Alfa Slab One', cursive;
-    color: white;
     font-size: 30px;
     text-transform: uppercase;
-    text-shadow: 0 1px 0 #000, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    color: #fff;
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #06D6A0, 0 0 30px #009FFD;
 }
 
 input[type=text] {
@@ -53,12 +53,12 @@ input[type=text] {
     background: rgba(255, 255, 255, 0);
     outline: none;
     color: white;
-    font-family: 'Alfa Slab One', cursive;
 }
 
 #enterSpacething {
     width: 400px;
     margin-bottom: 30px;
+    margin-top: 50px;
 }
 
 .hvr-bounce-in {

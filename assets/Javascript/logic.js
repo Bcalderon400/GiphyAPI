@@ -8,7 +8,7 @@ console.log(topics)
 function displayGifs() {
     $('#gifs').empty()
     var show = $(this).attr('data-name')
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=VXqJz0wVYIVmRpwkI5yT0uRFnpT5O93o&limit=5"
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=VXqJz0wVYIVmRpwkI5yT0uRFnpT5O93o&limit=10"
 
     $.ajax({
         url: queryURL,
@@ -24,6 +24,7 @@ function displayGifs() {
 
             } else {
                 var showDiv = $('<div>')
+                showDiv.addClass('eachGif')
 
                 var rate = $('<p>').text("Rating: " + results[i].rating)
 
@@ -46,6 +47,7 @@ function displayGifs() {
     })
 
 }
+
 
 // //$('.gif').on('click', function() {
 //     var state = $(this).attr('data-state')

@@ -95,9 +95,15 @@ button:hover {
 }
 
 #gifs {
-    margin: 0 auto;
+    columns: 400px 2;
     color: white;
     font-family: 'Alfa Slab One', cursive;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.gif {
+    padding: 20px;
 }
 
 
